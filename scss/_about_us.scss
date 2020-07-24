@@ -1,0 +1,14 @@
+#about-us {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .illustration {
+        flex-basis: 50%;
+    }
+    
+    .about-us-content {
+        flex-basis: 30%;
+    }
+    
+}

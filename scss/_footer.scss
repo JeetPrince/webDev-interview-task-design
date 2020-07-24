@@ -1,0 +1,26 @@
+#footer {
+    text-align: center;
+    color: #00402E;
+
+    .footer-nav {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .nav-item {
+                    margin: 0 1rem;
+
+                    .nav-link {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
