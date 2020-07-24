@@ -23,4 +23,19 @@
             }
         }
     }
+
+    @include responsive_mobile {
+        .footer-nav {
+            .navbar {
+                flex-direction: column;
+
+                .navbar-nav {
+                    padding: 1rem 0;
+                    .nav-item {
+                        margin: 0 0.5rem;
+                    }
+                }
+            }
+        }
+    }
 }

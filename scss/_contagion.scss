@@ -34,4 +34,29 @@
     }
 
 
+    @include responsive_mobile {
+        border-bottom: 1px solid lighten($primary-color, 30%);
+
+        .center {
+            width: 100%;
+        }
+
+        .cards-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .card {
+                width: initial;
+            }
+
+            margin-bottom: 2rem;
+        }
+
+        .illustration {
+            top: 15%;
+            left: 0;
+        }
+    }
+
 }

@@ -1,0 +1,20 @@
+// Mobile Device
+@mixin responsive_mobile {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+// Tablet Device
+@mixin responsive_tab {
+    @media only screen and (min-width: 767px) {
+        @content;
+    }
+}
+
+// Custom Sizes
+@mixin responsive($minWidth, $maxWidth) {
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        @content;
+    }
+}

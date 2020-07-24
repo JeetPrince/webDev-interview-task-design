@@ -11,6 +11,7 @@
         margin-top: 3rem;
         .step {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
 
@@ -47,4 +48,63 @@
         }
     }
 
+    @include responsive_mobile {
+        .center {
+            width: 100%;
+        }
+
+        .steps-to-follow {
+            .step {
+                text-align: center;
+                flex-direction: column;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid lighten($primary-color, 30%);
+
+                .step-content {
+                    position: relative;
+                    width: 100%;
+                    padding: 2rem;
+
+                    h2 {
+                        padding-top: 2rem;
+                    }
+
+                    .step-number {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin: 0;
+                    }
+
+                }
+                &:nth-child(even) {
+                    position: relative;
+                    width: 100%;
+                    border-bottom: 1px solid lighten($primary-color, 30%);
+
+    
+                    h2 {
+                        padding-top: 2rem;
+                    }
+    
+                    .step-content {
+                        order: 1;
+                    }
+    
+                    .illustration {
+                        order: 2;
+                    }
+    
+                    .step-number {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin: 0 !important;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -25,6 +25,19 @@
             transform: translateY(-50%);
             right: 5%;
         }
+    }
 
+    @include responsive_mobile {
+        border-bottom: 1px solid lighten($primary-color, 30%);
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .input-btn-group {
+            .email-input {
+                width: 300px
+            }
+        }
     }
 }

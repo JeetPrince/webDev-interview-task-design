@@ -1,14 +1,28 @@
 #about-us {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 
     .illustration {
         flex-basis: 50%;
+        order: 1;
     }
     
     .about-us-content {
         flex-basis: 30%;
+        order: 2;
+    }
+
+    @include responsive_mobile {
+        text-align: center;
+        flex-direction: column;
+        border-bottom: 1px solid lighten($primary-color, 30%);
+       
+        .about-us-content {
+            margin-bottom: 2rem;
+        }
+
     }
     
 }
