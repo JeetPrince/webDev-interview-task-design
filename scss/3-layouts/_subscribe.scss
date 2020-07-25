@@ -1,0 +1,43 @@
+#subscribe {
+    text-align: center;
+    padding: 5rem 0;
+
+    .text-secondary {
+        margin-bottom: 0;
+    }
+
+    .input-btn-group {
+        margin: 1rem 0;
+        display: inline-block;
+        position: relative;
+        
+        .email-input {
+            border-radius: 50px;
+            border: none;
+            padding: 1.5rem;
+            width: 400px;
+            box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 5%;
+        }
+    }
+
+    @include responsive_mobile {
+        border-bottom: 1px solid lighten($primary-color, 30%);
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .input-btn-group {
+            .email-input {
+                width: 300px
+            }
+        }
+    }
+}

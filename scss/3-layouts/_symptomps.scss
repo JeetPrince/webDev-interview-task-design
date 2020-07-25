@@ -1,0 +1,21 @@
+#symptomps {
+    text-align: center;
+    position: relative;
+    
+    .center {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    @include responsive_mobile {
+        margin: 2rem 0;
+        border-bottom: 1px solid lighten($primary-color, 30%);
+        .center {
+            width: 100%;
+        }
+
+        .container {
+            margin-bottom: 2rem;
+        }
+    }
+}

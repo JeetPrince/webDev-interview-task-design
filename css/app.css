@@ -8,6 +8,41 @@
   src: url("../fonts/Roboto_Regular.ttf") format("truetype");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto_Regular';
+  background: #fff6f6;
+  line-height: 1.7;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: 'RedHatDisplay_Bold';
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
 .container {
   max-width: 1100px;
   overflow: hidden;
@@ -125,46 +160,20 @@
   border-bottom: 1px solid #ddd;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Roboto_Regular';
-  background: #fff6f6;
-  line-height: 1.7;
-}
-
-h1, h2, h3,
-h4, h5, h6 {
-  font-family: 'RedHatDisplay_Bold';
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-ul, li {
-  list-style: none;
-}
-
-img {
-  width: 100%;
-}
-
 #header {
   height: 100vh;
 }
 
+#header .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 #header .navbar .navbar-nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,11 +185,12 @@ img {
           align-items: center;
 }
 
-#header .navbar .navbar-nav .hamburger {
-  display: none;
+#header .navbar .navbar-nav .logo {
+  position: relative;
 }
 
 #header .navbar .navbar-nav .nav-items {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,8 +229,23 @@ img {
   margin-top: 0.4rem;
 }
 
+#header nav.navbar.sticky {
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #fff;
+}
+
+#header nav.navbar.sticky .container {
+  padding: 0.5rem;
+}
+
+#header nav.navbar.sticky .navbar-nav .nav-items .nav-item:last-child .nav-link {
+  background-color: #fff;
+}
+
 #header #header-content .content {
-  padding: 5rem 0;
+  position: relative;
+  padding-top: 15rem;
   width: 40%;
 }
 
@@ -246,7 +271,7 @@ img {
             flex-direction: column;
   }
   #header .navbar .navbar-nav .nav-items {
-    padding-top: 1.5rem;
+    padding: 0.3rem 0;
   }
   #header .navbar .navbar-nav .nav-items .nav-item {
     margin-right: 0.7rem;
@@ -258,7 +283,6 @@ img {
     text-align: center;
   }
   #header #header-content .content {
-    padding: 2rem;
     width: 100%;
   }
   #header .illustration {
